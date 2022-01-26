@@ -11,6 +11,7 @@ module.exports = {
         viewport: false,
       },
     },
+    '@storybook/addon-interactions',
   ],
   logLevel: 'debug',
   webpackFinal: (config) => {
@@ -24,6 +25,9 @@ module.exports = {
   },
   core: {
     builder: 'webpack4',
+  },
+  features: {
+    interactionsDebugger: true
   },
   staticDirs: ['../public'],
 };
