@@ -38,7 +38,11 @@ export const Header = ({ user, isLoggedIn, onLogin, onLogout, onCreateAccount }:
         <h1>Acme</h1>
       </div>
       <div>
-        {user && <span>Hello, {user.name}!</span>}
+        {user && (
+          <span className="welcome">
+            Welcome, <b>{user.name}</b>!
+          </span>
+        )}
         {isLoggedIn ? (
           <Button size="small" onClick={onLogout} label="Log out" />
         ) : (
